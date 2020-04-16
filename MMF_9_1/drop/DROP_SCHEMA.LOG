@@ -5,8 +5,8 @@ new:drop user MMF_9_1 CASCADE
 
 User MMF_9_1 dropped.
 
-Elapsed: 00:00:05.451
-Elapsed: 00:00:05.457
+Elapsed: 00:00:00.112
+Elapsed: 00:00:00.116
 Drop TBSP: MMF_9_1_DATA
 
 old:DROP TABLESPACE &&USER_NAME
@@ -18,5 +18,5 @@ new:DROP TABLESPACE MMF_9_1_DATA
 
 TABLESPACE MMF_9_1_DATA dropped.
 
-Elapsed: 00:00:02.511
-Elapsed: 00:00:02.515
+Elapsed: 00:00:02.295
+Elapsed: 00:00:02.298

@@ -12,7 +12,7 @@ SET SERVEROUTPUT ON
 PROMPT Drop username: &&USER_NAME
 PROMPT
 
-@drop_user.sql &&USER_NAME
+@drop_schema.sql &&USER_NAME
 
 PROMPT Drop TBSP: &&TABLESPACE_NAME
 PROMPT

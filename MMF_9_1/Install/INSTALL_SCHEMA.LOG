@@ -1,21 +1,21 @@
 Your username: MMF_9_1
 
-Your path: E:\ProgramData\DB TBSP\
+Your path: E:\ProgramData\DB_TBSP
 
 Creating tablespace:
 MMF_9_1_DATA
-E:\ProgramData\DBMMF_9_1_DATA.dbf
+E:\ProgramData\DB_TBSPMMF_9_1_DATA.dbf
 old:CREATE TABLESPACE &&DATA_TBSP_NAME
     DATAFILE 
         '&&DATA_FILE_NAME' SIZE 10485760 AUTOEXTEND ON NEXT 10485760 MAXSIZE 10737418240
 new:CREATE TABLESPACE MMF_9_1_DATA
     DATAFILE 
-        'E:\ProgramData\DBMMF_9_1_DATA.dbf' SIZE 10485760 AUTOEXTEND ON NEXT 10485760 MAXSIZE 10737418240
+        'E:\ProgramData\DB_TBSPMMF_9_1_DATA.dbf' SIZE 10485760 AUTOEXTEND ON NEXT 10485760 MAXSIZE 10737418240
 
 TABLESPACE MMF_9_1_DATA created.
 
-Elapsed: 00:00:00.188
-Elapsed: 00:00:00.200
+Elapsed: 00:00:00.174
+Elapsed: 00:00:00.179
 
 
 Creating user
@@ -29,23 +29,32 @@ DEFAULT TABLESPACE MMF_9_1_DATA
 TEMPORARY TABLESPACE TEMP
 QUOTA 20M on MMF_9_1_DATA
 
-User MMF_9_1 created.
-
-Elapsed: 00:00:00.574
-Elapsed: 00:00:00.578
+Error starting at line : 5 File @ E:\ProgramData\MMF_9_1\Install\create_schema.sql
+In command -
+CREATE USER &&SCHEMA_NAME IDENTIFIED BY &&SCHEMA_PASSWORD
+DEFAULT TABLESPACE &&SCHEMA_TBSP
+TEMPORARY TABLESPACE TEMP
+QUOTA 20M on &&SCHEMA_TBSP
+Error report -
+ORA-01920: имя пользователя 'MMF_9_1' противоречит имени другого пользователя или роли
+01920. 00000 -  "user name '%s' conflicts with another user or role name"
+*Cause:    There is already a user or role with that name.
+*Action:   Specify a different user name.
+Elapsed: 00:00:00.009
+Elapsed: 00:00:00.012
 Granting privileges
 old:GRANT CREATE PROCEDURE TO &&SCHEMA_NAME
 new:GRANT CREATE PROCEDURE TO MMF_9_1
 
 Grant succeeded.
 
-Elapsed: 00:00:00.059
+Elapsed: 00:00:00.004
 old:GRANT CREATE SEQUENCE TO &&SCHEMA_NAME
 new:GRANT CREATE SEQUENCE TO MMF_9_1
 
 Grant succeeded.
 
-Elapsed: 00:00:00.006
+Elapsed: 00:00:00.004
 old:GRANT CREATE TABLE TO &&SCHEMA_NAME
 new:GRANT CREATE TABLE TO MMF_9_1
 
@@ -57,13 +66,13 @@ new:GRANT CREATE TYPE TO MMF_9_1
 
 Grant succeeded.
 
-Elapsed: 00:00:00.003
+Elapsed: 00:00:00.004
 old:GRANT CREATE TRIGGER TO &&SCHEMA_NAME
 new:GRANT CREATE TRIGGER TO MMF_9_1
 
 Grant succeeded.
 
-Elapsed: 00:00:00.005
+Elapsed: 00:00:00.004
 old:GRANT CREATE SYNONYM TO &&SCHEMA_NAME
 new:GRANT CREATE SYNONYM TO MMF_9_1
 
@@ -75,11 +84,11 @@ new:GRANT CREATE SESSION TO MMF_9_1
 
 Grant succeeded.
 
-Elapsed: 00:00:00.005
+Elapsed: 00:00:00.006
 old:GRANT CREATE ANY DIRECTORY TO &&SCHEMA_NAME
 new:GRANT CREATE ANY DIRECTORY TO MMF_9_1
 
 Grant succeeded.
 
 Elapsed: 00:00:00.005
-Elapsed: 00:00:00.011
+Elapsed: 00:00:00.012

@@ -3,20 +3,35 @@ Drop username: MMF_9_1
 old:drop user &&USER_NAME CASCADE
 new:drop user MMF_9_1 CASCADE
 
-User MMF_9_1 dropped.
-
-Elapsed: 00:00:00.112
-Elapsed: 00:00:00.116
-Drop TBSP: MMF_9_1_DATA
+Error starting at line : 3 File @ E:\ProgramData\MMF_9_1\drop\drop_schema.sql
+In command -
+drop user &&USER_NAME CASCADE
+Error report -
+ORA-01918: пользователь 'MMF_9_1' не существует
+01918. 00000 -  "user '%s' does not exist"
+*Cause:    User does not exist in the system.
+*Action:   Verify the user name is correct.
+Elapsed: 00:00:00.755
+Elapsed: 00:00:00.760
+Drop TBSP: MMF_9_1._DATA
 
 old:DROP TABLESPACE &&USER_NAME
    INCLUDING CONTENTS AND DATAFILES
     CASCADE CONSTRAINTS
-new:DROP TABLESPACE MMF_9_1_DATA
+new:DROP TABLESPACE MMF_9_1._DATA
    INCLUDING CONTENTS AND DATAFILES
     CASCADE CONSTRAINTS
 
-TABLESPACE MMF_9_1_DATA dropped.
-
-Elapsed: 00:00:02.295
-Elapsed: 00:00:02.298
+Error starting at line : 3 File @ E:\ProgramData\MMF_9_1\drop\drop_tablespace.sql
+In command -
+DROP TABLESPACE &&USER_NAME
+   INCLUDING CONTENTS AND DATAFILES
+    CASCADE CONSTRAINTS
+Error report -
+ORA-02173: неверная опция в DROP TABLESPACE
+02173. 00000 -  "invalid option for DROP TABLESPACE"
+*Cause:    Either a token other than INCLUDING was found following the
+           tablespace name or some text was found following INCLUDING CONTENTS.
+*Action:   Place nothing or only INCLUDING CONTENTS after the tablespace name.
+Elapsed: 00:00:00.050
+Elapsed: 00:00:00.054

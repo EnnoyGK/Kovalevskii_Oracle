@@ -1,0 +1,13 @@
+@table_album.sql
+@table_album_review.sql
+@table_composition.sql
+@table_composition_owner.sql
+@table_composition_review.sql
+@table_genre.sql
+@table_listening_history.sql
+@table_playlist.sql
+@table_playlist_content.sql
+@table_user.sql
+@table_user_playlist.sql
+@table_user_state.sql
+@create_indexes.sql

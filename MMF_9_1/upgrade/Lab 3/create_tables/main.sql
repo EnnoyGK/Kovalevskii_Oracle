@@ -1,4 +1,5 @@
 DEFINE USER_NAME = &&1
+SPOOL INSTALL_SCHEMA.LOG
 
 @table_album.sql &&USER_NAME
 @table_album_review.sql &&USER_NAME
@@ -13,3 +14,5 @@ DEFINE USER_NAME = &&1
 @table_user_playlist.sql &&USER_NAME
 @table_user_state.sql &&USER_NAME
 @create_indexes.sql &&USER_NAME
+
+SPOOL OFF
